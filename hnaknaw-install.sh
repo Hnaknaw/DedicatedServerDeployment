@@ -1,4 +1,6 @@
 #!/bin/bash
+
+#ISPConfig3 Installer
 shouldloop1=true;
 while $shouldloop1; do
 read -p "Would you like to launch ISPConfig3 Auto Installer? [y/n]: " delconf
@@ -17,5 +19,22 @@ elif [ $delconf == 'n' ]; then
 else
    echo "Enter a valid response (y/n)";
    shouldloop1=true;
+fi
+done
+
+
+
+#Open Game Panel Installer
+shouldloop2=true;
+while $shouldloop2; do
+read -p "Would you like to launch OpenGamePanel Auto Installer? [y/n]: " delconf
+shouldloop2=false;
+if [ $delconf == 'y' ]; then
+   echo "OpenGamePanel Auto Installer Initiated."
+elif [ $delconf == 'n' ]; then
+   echo "OpenGamePanel will not be installed."
+else
+   echo "Enter a valid response (y/n)";
+   shouldloop2=true;
 fi
 done
