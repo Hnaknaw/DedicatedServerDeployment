@@ -31,6 +31,8 @@ read -p "Would you like to launch OpenGamePanel Auto Installer? [y/n]: " delconf
 shouldloop2=false;
 if [ $delconf == 'y' ]; then
    echo "OpenGamePanel Auto Installer Initiated."
+   su - root
+   
 elif [ $delconf == 'n' ]; then
    echo "OpenGamePanel will not be installed."
 else
